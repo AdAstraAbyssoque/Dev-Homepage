@@ -1,0 +1,40 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main  # replace with the name of your default branch if it's not "main"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4.1.1  # use the latest version
+
+      - name: Setup Node.js environment 💻
+        uses: actions/setup-node@v4.0.2  # use the latest version
+        with:
+          node-version: '20'
+
+      - name: Cache dependencies 🗄️
+        uses: actions/cache@v4.0.1  # use the latest version
+        with:
+          path: ~/.yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-
+
+      - name: Install and Build 🔧
+        run: |
+          yarn install --frozen-lockfile
+          yarn docs:build  # change "yarn run build" to "yarn docs:build"
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4  
+        with:
+          repository-name: AdAstraAbyssoque/AdAstraAbyssoque.github.io  # replace with your username and repository
+          branch: main  # the branch where your site will be hosted, usually it's "main" for user.github.io repo
+          folder: docs/.vitepress/dist  # change ".vitepress/dist" to "docs/.vitepress/dist"
+          clean: true  # automatically remove old files
+          token: ${{ secrets.WEBSITETOKEN }}
