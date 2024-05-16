@@ -53,7 +53,7 @@ export default defineConfig({
 			],
 		},
 		user: {
-			email: 'admin@imalun.com',
+			email: 'bliu699@outlook.com',
 		},
 		footer: {
 			copyrightYear: '2023',
