@@ -42,5 +42,8 @@
 			"prettier --write"
 		],
 		"**/*.{js,jsx,vue,ts,tsx,json,less}": "prettier --write"
+	},
+	"dependencies": {
+		"markdown-it-task-lists": "^2.1.1"
 	}
 }

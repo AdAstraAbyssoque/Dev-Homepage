@@ -6,7 +6,7 @@ import { data as allPosts } from './posts.data';
 import { groupBy, sortBy } from '../utils/shared';
 import { formatDate } from '../utils/client';
 
-import bannerImg from '../assets/banner.png';
+import bannerImg from '../assets/banner.jpg';
 
 // import failureImg from '../assets/img/failure.ico'
 

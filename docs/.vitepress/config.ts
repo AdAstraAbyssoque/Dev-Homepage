@@ -32,7 +32,7 @@ export default defineConfig({
 		topBars: [
 			{ title: 'Home', url: '/' },
 			{
-				title: 'Demo',
+				title: 'Docs',
 				children: [
 					{ title: '归档', url: '/archives' },
 					{ title: '分类', url: '/categories' },
@@ -59,7 +59,7 @@ export default defineConfig({
 			copyrightYear: '2023',
 			liveTime: {
 				enable: true,
-				startTime: '2023/10/01',
+				startTime: '2024/05/16',
 			},
 		},
 		links: [
@@ -76,6 +76,7 @@ export default defineConfig({
 				desc: '醒，亦在人间；梦，亦在人间',
 			},
 		],
+		/*
 		reward: {
 			enable: true,
 			methods: [
@@ -93,6 +94,7 @@ export default defineConfig({
 				},
 			],
 		},
+		*/
 		rightside: {
 			readmode: true,
 			aside: true,
@@ -124,9 +126,9 @@ export default defineConfig({
 			style: 'flat',
 			position: 'bottom',
 		},
-		rss: {
+		/*rss: {
 			enable: true,
 			baseUrl: 'https://vitepress-theme-async.imalun.com',
-		},
+		},*/
 	},
 });

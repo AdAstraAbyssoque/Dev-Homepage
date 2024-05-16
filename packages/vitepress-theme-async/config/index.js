@@ -25,7 +25,7 @@ export const defaultConfig = {
 		pageLoading: true,
 		themeLoading: true,
 		customMdStyle: false,
-		author: 'async',
+		author: 'Sulfone',
 		postDir: 'posts',
 		indexGenerator: {
 			perPage: 10,
@@ -42,12 +42,12 @@ export const defaultConfig = {
 			tags: '/tags',
 		},
 		user: {
-			name: 'ThemeAsync',
-			firstName: 'Theme',
-			lastName: 'Async',
+			name: '识见异思',
+			firstName: 'Sulfone',
+			lastName: '石风砜',
 			email: null,
-			domain: '站点域名',
-			describe: '网站简介。',
+			domain: 'adastraabyssoque.github.io',
+			describe: '是乍见之欢，也是天各一方',
 			ruleText: '暂不接受个人博客以外的友链申请，确保您的网站内容积极向上，文章至少30篇，原创70%以上，部署HTTPS。',
 		},
 		favicon: {
@@ -78,16 +78,16 @@ export const defaultConfig = {
 			liveTime: {
 				enable: false,
 				prefix: 'footer.tips',
-				startTime: '04/10/2022 17:00:00',
+				startTime: '05/16/2024 17:00:00',
 			},
 		},
 		cover: {
 			type: 'img',
 		},
 		about: {
-			title: '如果一切都是镜花水月，那就让这万物走向终结。如果一切皆是命中注定，那就让这世界消失殆尽。',
+			title: '是乍见之欢，也是天各一方',
 			introduction:
-				'大家好，我是 <strong>Async</strong>，很高兴您能在浩瀚如烟的互联网世界里发现这个博客，更感谢您能够饶有兴致地浏览这个页面。建立这个 Blog 是出于兴趣爱好，我将在此分会分享一些学习笔记，可能还会分享少许图片、视频以及其他有趣东西的链接。',
+				'大家好，我是 <strong>Sulfone</strong>，欢迎在广茂互联网大陆上隐蔽的一角，发现了黑暗中摸索的我。我是一个技术的狂热爱好者，却不爱好自己造轮子，喜欢到处看看，四处走走，随着远风和缘分走向未知的迷途。希望你玩得开心。',
 			blog: `<ul class="trm-list">
 				<li>程序：Vitepress </li>
 				<li>主题：vitepress-theme-async </li>
