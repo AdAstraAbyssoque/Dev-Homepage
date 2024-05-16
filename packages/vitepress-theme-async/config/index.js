@@ -42,7 +42,7 @@ export const defaultConfig = {
 			tags: '/tags',
 		},
 		user: {
-			name: '识见异思',
+			name: '石风砜',
 			firstName: 'Sulfone',
 			lastName: '石风砜',
 			email: null,
