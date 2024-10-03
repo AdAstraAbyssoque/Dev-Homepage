@@ -48,7 +48,6 @@ const onChangState = () => {
   z-index: 9;
   height: var(--top-bar-height);
   border-radius: var(--card-border-radius, 10px);
-  background-color: rgba(252, 252, 254, 1); // 默认背景颜色
 
   &.home-background {
     background-color: rgba(252, 252, 254, 0); // 首页背景颜色
