@@ -39,7 +39,7 @@ export default defineConfig({
 					{ title: '标签', url: '/tags' },
 				],
 			},
-			{ title: 'Links', url: '/links' },
+			// { title: 'Links', url: '/links' },
 			{ title: 'About', url: '/about' },
 		],
 		sidebar: {
