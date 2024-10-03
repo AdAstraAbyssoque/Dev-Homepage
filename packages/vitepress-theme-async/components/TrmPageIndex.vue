@@ -11,9 +11,6 @@
 
 <script>
 import { defineComponent } from 'vue';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import 'aos/dist/aos.css';
 import TrmHero from "./TrmHero.vue";
 
 gsap.registerPlugin(ScrollTrigger);
