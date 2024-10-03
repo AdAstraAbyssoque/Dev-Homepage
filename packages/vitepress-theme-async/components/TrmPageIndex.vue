@@ -1,59 +1,58 @@
-<script setup lang="ts">
-import { computed } from "vue";
-import { useData } from "vitepress";
-import { AsyncThemeConfig } from "types";
-import { useAllPosts, useCategories, usePageUrl } from "../composables";
-import { useCurrentPageIndex } from "../blog";
+<template>
+  <div class="full-width-index">
+    <div class="front"></div>
+    <div class="home">
+      <div class="FPHero">
+        <TrmHero />
+      </div>
+    </div>
+  </div>
+</template>
 
-import TrmCardCategorie from "./global/TrmCardCategorie.vue";
-import TrmCardPost from "./global/TrmCardPost.vue";
-import TrmPagination from "./TrmPagination.vue";
-import TrmDividerTitle from "./global/TrmDividerTitle.vue";
-import TrmIndexUpCom from "./TrmIndexUpCom.vue";
+<script>
+import { defineComponent } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import 'aos/dist/aos.css';
+import TrmHero from "./TrmHero.vue";
 
-const { page, theme } = useData<AsyncThemeConfig>();
-const pageUrl = usePageUrl();
-const currentPageIndex = useCurrentPageIndex();
-const allPosts = useAllPosts();
-const pageSize = theme.value.indexGenerator?.perPage || 10;
+gsap.registerPlugin(ScrollTrigger);
 
-const categories = useCategories()
-  .sort((a, b) => b[1] - a[1])
-  .slice(0, 2);
-
-const pageList = computed(() => {
-  const startIdx = (currentPageIndex.value - 1) * pageSize;
-  const endIdx = startIdx + pageSize;
-  return allPosts.slice(startIdx, endIdx);
+export default defineComponent({
+  name: 'TrmPageIndex',
+  components: {
+    TrmHero
+  }
 });
 </script>
-<template>
-  <TrmIndexUpCom />
-  <div v-if="categories.length > 0"
-       class="row hidden-sm"
-       style="padding-top: 20vh;">
-    <div v-for="(item, index) in categories"
-         class="col-lg-6"
-         :key="index">
-      <TrmCardCategorie :name="item[0]"
-                        :length="item[1]"
-                        :category-url="pageUrl.categorys + '?q=' + item[0]" />
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12"
-         v-if="categories.length > 0">
-      <TrmDividerTitle :title="$t('title.newPublish')"
-                       index="01" />
-    </div>
-    <div class="col-lg-4"
-         v-for="item in pageList.slice(0, 3)"
-         :key="item.url">
-      <TrmCardPost :post="item"
-                   :category-url="pageUrl.categorys"
-                   :sticky="page.frontmatter.index && item.sticky && item.sticky > 0" />
-    </div>
-  </div>
-  <TrmPagination :total="allPosts.length"
-                 :size="pageSize" />
-</template>
+
+<style scoped>
+.full-width-index h1,
+.full-width-index h2 {
+  font-weight: 500;
+}
+.full-width-index {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  overflow-x: hidden;
+}
+.FPHero {
+  width: 100vw;
+  height: 100vh;
+}
+.front {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(245, 245, 245, 0);
+}
+
+.home {
+  width: 100%;
+  height: 1430vh;
+}
+</style>
