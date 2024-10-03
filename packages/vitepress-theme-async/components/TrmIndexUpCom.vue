@@ -61,7 +61,7 @@ export default {
   max-width: 600px;
   padding: 20px; /* Optional: to add some padding around the content */
   position: absolute;
-  top: 66.6%; /* Position at 3/4 of the height */
+  top: 75%; /* Position at 3/4 of the height */
   transform: translateY(-50%); /* Adjust for centering */
 }
 
