@@ -13,8 +13,6 @@
 import { defineComponent } from 'vue';
 import TrmHero from "./TrmHero.vue";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default defineComponent({
   name: 'TrmPageIndex',
   components: {
