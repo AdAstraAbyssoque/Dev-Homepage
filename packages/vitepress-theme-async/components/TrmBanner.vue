@@ -2,6 +2,7 @@
 import { useData, withBase } from "vitepress";
 import { useBanner, useSingleColumn } from "../composables/index";
 import TrmBannerBg from "./TrmBannerBg.vue";
+import { computed } from "vue";
 
 const { page } = useData();
 const banner = useBanner();
@@ -11,10 +12,13 @@ const onScrollTo = () => {
   const container = document.querySelector(".trm-banner");
   container && window.scrollTo({ top: container.clientHeight - 20, behavior: "smooth" });
 };
+
+const isHomePage = computed(() => page.value.frontmatter.home === true);
 </script>
 
 <template>
-  <div class="trm-banner">
+  <div class="trm-banner"
+       v-if="!isHomePage">
     <slot name="banner-top" />
     <TrmBannerBg :banner="banner" />
     <div class="trm-banner-content trm-overlay">

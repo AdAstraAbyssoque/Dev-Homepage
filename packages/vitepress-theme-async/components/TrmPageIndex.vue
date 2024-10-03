@@ -9,6 +9,7 @@ import TrmCardCategorie from "./global/TrmCardCategorie.vue";
 import TrmCardPost from "./global/TrmCardPost.vue";
 import TrmPagination from "./TrmPagination.vue";
 import TrmDividerTitle from "./global/TrmDividerTitle.vue";
+import TrmIndexUpCom from "./TrmIndexUpCom.vue";
 
 const { page, theme } = useData<AsyncThemeConfig>();
 const pageUrl = usePageUrl();
@@ -27,8 +28,10 @@ const pageList = computed(() => {
 });
 </script>
 <template>
+  <TrmIndexUpCom />
   <div v-if="categories.length > 0"
-       class="row hidden-sm">
+       class="row hidden-sm"
+       style="padding-top: 20vh;">
     <div v-for="(item, index) in categories"
          class="col-lg-6"
          :key="index">
