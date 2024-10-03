@@ -117,7 +117,7 @@ export default {
   max-width: 600px;
   padding: 20px; /* Optional: to add some padding around the content */
   position: absolute;
-  top: 66.7%; /* Adjust for centering */
+  top: 45%; /* Adjust for centering */
   transform: translateY(-50%); /* Adjust for centering */
 }
 
@@ -125,7 +125,7 @@ export default {
   display: inline-block;
   padding: 10px 40px;
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.389);
+  background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   font-size: 1.3rem;
   font-family: "Courier New", Courier, monospace;

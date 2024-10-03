@@ -45,4 +45,7 @@ export default defineComponent({
   align-items: center;
   background-color: rgba(245, 245, 245, 0);
 }
+.home {
+  height: 230vh;
+}
 </style>

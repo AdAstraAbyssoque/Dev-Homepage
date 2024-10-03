@@ -44,6 +44,7 @@
 		"**/*.{js,jsx,vue,ts,tsx,json,less}": "prettier --write"
 	},
 	"dependencies": {
-		"markdown-it-task-lists": "^2.1.1"
+		"markdown-it-task-lists": "^2.1.1",
+		"vitepress": "^1.3.4"
 	}
 }

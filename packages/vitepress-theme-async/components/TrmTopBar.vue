@@ -1,35 +1,24 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from "vue";
+import { computed } from "vue";
+import { useData } from "vitepress";
 import TrmTopBarLogo from "./TrmTopBarLogo.vue";
 import TrmTopBarMenu from "./TrmTopBarMenu.vue";
 import { useShowMenu } from "../blog";
 
 const show = useShowMenu();
-const opacity = ref(1);
+const { page } = useData();
+
+const isHomePage = computed(() => page.value.frontmatter.home === true);
 
 const onChangState = () => {
   if (show) {
     show.value = !show.value;
   }
 };
-
-const handleScroll = () => {
-  const scrollTop = window.scrollY;
-  opacity.value = scrollTop < 200 ? scrollTop / 200 : 1;
-};
-
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-});
-
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
 </script>
 
 <template>
-  <header class="trm-top-bar"
-          :style="{ backgroundColor: `rgba(252, 252, 254, ${opacity})` }">
+  <header :class="['trm-top-bar', { 'home-background': isHomePage }]">
     <div class="container">
       <div class="trm-left-side">
         <slot name="topbar-left-before" />
@@ -59,7 +48,11 @@ onUnmounted(() => {
   z-index: 9;
   height: var(--top-bar-height);
   border-radius: var(--card-border-radius, 10px);
-  background-color: rgba(252, 252, 254, 0.8); // 修改透明度
+  background-color: rgba(252, 252, 254, 1); // 默认背景颜色
+
+  &.home-background {
+    background-color: rgba(252, 252, 254, 0); // 首页背景颜色
+  }
 
   .container {
     display: flex;
