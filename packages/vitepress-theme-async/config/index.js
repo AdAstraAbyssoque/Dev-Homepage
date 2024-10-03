@@ -25,7 +25,7 @@ export const defaultConfig = {
 		pageLoading: true,
 		themeLoading: true,
 		customMdStyle: false,
-		author: 'Sulfone',
+		author: 'Shan',
 		postDir: 'posts',
 		indexGenerator: {
 			perPage: 10,
@@ -43,7 +43,7 @@ export const defaultConfig = {
 		},
 		user: {
 			name: '落雨杉',
-			firstName: 'Sulfone',
+			firstName: 'Shan',
 			lastName: '落雨杉',
 			email: null,
 			domain: 'adastraabyssoque.github.io',
@@ -87,7 +87,7 @@ export const defaultConfig = {
 		about: {
 			title: '是乍见之欢，也是天各一方',
 			introduction:
-				'大家好，我是 <strong>Sulfone</strong>，欢迎在广茂互联网大陆上隐蔽的一角，发现了黑暗中摸索的我。我是一个技术的狂热爱好者，却不爱好自己造轮子，喜欢到处看看，四处走走，随着远风和缘分走向未知的迷途。希望你玩得开心。',
+				'大家好，我是 <strong>Shan</strong>，欢迎在广茂互联网大陆上隐蔽的一角，发现了黑暗中摸索的我。我是一个技术的狂热爱好者，却不爱好自己造轮子，喜欢到处看看，四处走走，随着远风和缘分走向未知的迷途。希望你玩得开心。',
 			blog: `<ul class="trm-list">
 				<li>程序：Vitepress </li>
 				<li>主题：vitepress-theme-async </li>
