@@ -43,7 +43,7 @@ export default defineConfig({
 			{ title: 'About', url: '/about' },
 		],
 		sidebar: {
-			typedText: ['Web Developer', 'UI Designer'],
+			typedText: ['Web Developer', 'Student at HKUST-GZ'],
 			social: [
 				{
 					name: 'vue',

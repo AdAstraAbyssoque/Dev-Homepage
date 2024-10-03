@@ -42,9 +42,9 @@ export const defaultConfig = {
 			tags: '/tags',
 		},
 		user: {
-			name: '石风砜',
+			name: '落雨杉',
 			firstName: 'Sulfone',
-			lastName: '石风砜',
+			lastName: '落雨杉',
 			email: null,
 			domain: 'adastraabyssoque.github.io',
 			describe: '是乍见之欢，也是天各一方',
